@@ -21,7 +21,7 @@ const Footer = () => {
             <div className="col text-center">
               <p
                 className="textGrayfz16Regular pointer"
-                onClick={() => history.push("/policy")}
+                // onClick={() => history.push("/policy")}
               >
                 Privacy Policy
               </p>
@@ -30,7 +30,7 @@ const Footer = () => {
             <div className="col text-center">
               <p
                 className="textGrayfz16Regular pointer"
-                onClick={() => history.push("/term")}
+                // onClick={() => history.push("/term")}
               >
                 Terms & Conditions
               </p>
@@ -39,7 +39,7 @@ const Footer = () => {
             <div className="col text-center">
               <p
                 className="textGrayfz16Regular pointer"
-                onClick={() => history.push("/contact")}
+                // onClick={() => history.push("/contact")}
               >
                 Contact Us
               </p>

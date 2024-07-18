@@ -198,7 +198,8 @@ nav.black ul {
 }
 
 .navLink {
-  color: #b5b5c3;
+  /* color: #b5b5c3; */
+  color: #64dbf2;
   font-family: Roboto;
   font-size: 18px;
   font-weight: 500;
@@ -207,20 +208,20 @@ nav.black ul {
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .navLink:hover {
   color: #64dbf2;
 }
 
-.navLink:active {
+/* .navLink:active {
   color: #64dbf2;
 }
 
 .navActive {
   color: #64dbf2;
-}
+} */
 
 .logo1 {
   font-family: Roboto;
@@ -237,18 +238,18 @@ nav.black ul {
   color: #64dbf2;
   outline: none;
   border: 1px solid #64dbf2;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  /* cursor: pointer; */
+  /* transition: all 0.2s ease-in-out; */
   text-decoration: none;
   margin-left: 10px;
   font-size: 16px;
 }
 
-/* .greenButton:hover {
-  transition: all 0.2s ease-in-out;
-  background: #1bc5bd;
+.greenButton:hover {
+  /* transition: all 0.2s ease-in-out;
+  background: #1bc5bd; */
   color: #fff;
-} */
+}
 .linear_gradient {
   background-image: linear-gradient(to bottom, #64dbf2, #00bde2);
 }
@@ -2158,14 +2159,14 @@ select:focus {
     padding-bottom: 0px !important;
   }
 }
-.breadtable ol{
+.breadtable ol {
   display: flex;
   list-style: none;
-  justify-content: center !important; 
+  justify-content: center !important;
 }
-.breadtable .active{
+.breadtable .active {
   color: #64dbf2 !important;
 }
-.breadtable ol li{
+.breadtable ol li {
   color: #b5b5c3;
 }

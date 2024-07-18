@@ -17,7 +17,7 @@ const Navbar = (props) => {
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
-  const [names, setName] = useState("");
+  // const [names, setName] = useState("");
   const [data, setData] = useState({});
   const [images, setImage] = useState([]);
   const dispatch = useDispatch();
@@ -45,9 +45,10 @@ const Navbar = (props) => {
       .catch((err) => {
         if (err?.status == 410) {
           // history.push("/postlist");
-        }if(err?.status == 401){
+        }
+        if (err?.status == 401) {
           localStorage.clear();
-          history.push("/")
+          history.push("/");
         } else {
           // toast.error(err.message);
         }
@@ -79,46 +80,56 @@ const Navbar = (props) => {
               <IconButton className="responsiveToggle" onClick={toggleButton}>
                 <GiHamburgerMenu />
               </IconButton>
-              <NavLink className="navLink logo1 " to="/home">
+              <NavLink
+                className="navLink logo1 "
+                // to="/home"
+                to="#"
+              >
                 <img src={logo2} alt="logo" width="100px" className="" />
               </NavLink>
               <NavMenu>
                 <NavLink
-                  activeClassName="navActive"
-                  className="navLink navHover "
-                  to="/home"
+                  // activeClassName="navActive"
+                  // className="navLink navHover "
+                  className="navLink"
+                  // to="/home"
+                  to="#"
                 >
                   Home
                 </NavLink>
                 <NavLink
-                  activeClassName="navActive"
+                  // activeClassName="navActive"
                   className="navLink navHover"
-                  to="/book"
+                  // to="/book"
+                  to="#"
                 >
                   Books
                 </NavLink>
 
                 {/* {users?.userType == 2 && ( */}
                 <NavLink
-                  activeClassName="navActive"
+                  // activeClassName="navActive"
                   className="navLink navHover"
-                  to="/training"
+                  // to="/training"
+                  to="#"
                 >
                   Courses
                 </NavLink>
                 <NavLink
-                  activeClassName="navActive"
+                  // activeClassName="navActive"
                   className="navLink navHover "
-                  to="/trainingschedule"
+                  // to="/trainingschedule"
+                  to="#"
                 >
                   Training Schedule
                 </NavLink>
                 {/* )} */}
                 {Id && (
                   <NavLink
-                    activeClassName="navActive"
+                    // activeClassName="navActive"
                     className="navLink navHover"
-                    to="/profile"
+                    // to="/profile"
+                    to="#"
                   >
                     My library
                   </NavLink>
@@ -132,7 +143,7 @@ const Navbar = (props) => {
               <button
                 className="py-2 text-white desk  width150 rounded border-none linear_gradient_desk mx-1"
                 style={{}}
-                onClick={downloadFile}
+                // onClick={downloadFile}
               >
                 <img src={img1} alt="logo" className="rounded" />
                 &nbsp; Desktop App
@@ -146,7 +157,11 @@ const Navbar = (props) => {
             >
               {Id ? (
                 <>
-                  <Link to="/profile" className="text_decoration_None   ">
+                  <Link
+                    // to="/profile"
+                    to="#"
+                    className="text_decoration_None   "
+                  >
                     <div className="d-flex align-items-center ">
                       <Avatar
                         className=""
@@ -175,7 +190,8 @@ const Navbar = (props) => {
                   <NavLink
                     className="greenButton"
                     activeClassName="whiteButton linear_gradient"
-                    to="/signIn"
+                    // to="/signIn"
+                    to="#"
                     // onClick={() => history.push("/signIn")}
                   >
                     Sign In
@@ -183,7 +199,8 @@ const Navbar = (props) => {
                   <NavLink
                     className="greenButton"
                     activeClassName="whiteButton linear_gradient"
-                    to="/signUp"
+                    // to="/signUp"
+                    to="#"
                     // onClick={() => history.push("/signUp")}
                   >
                     Sign Up
@@ -200,7 +217,8 @@ const Navbar = (props) => {
                   <div className="">
                     <NavLink
                       className="px-3 py-2 d-flex pointer text-decoration-none"
-                      to="/profile"
+                      // to="/profile"
+                      to="#"
                     >
                       {/* {profiles === "lib" ? (
                           <img className="" src={libA} alt="" />
@@ -217,7 +235,8 @@ const Navbar = (props) => {
                   <div className="">
                     <NavLink
                       className="px-3 py-2 d-flex pointer text-decoration-none"
-                      to="/profile/history"
+                      // to="/profile/history"
+                      to="#"
                     >
                       {/* {profiles === "history" ? (
                           <img className="" src={orderA} alt="" />
@@ -234,7 +253,8 @@ const Navbar = (props) => {
                   <div className="">
                     <NavLink
                       className="px-3 py-2 d-flex pointer text-decoration-none"
-                      to="/profile/wishlist"
+                      // to="/profile/wishlist"
+                      to="#"
                       // onClick={() => click("wishlist")}
                     >
                       {/* {profiles === "wishlist" ? (
@@ -266,7 +286,8 @@ const Navbar = (props) => {
                   <div className="">
                     <NavLink
                       className="px-3 py-2 d-flex pointer text-decoration-none"
-                      to="/profile/account"
+                      // to="/profile/account"
+                      to="#"
                       // onClick={() => click("account")}
                     >
                       {/* {profiles === "account" ? (
@@ -284,7 +305,8 @@ const Navbar = (props) => {
                   <div className="">
                     <NavLink
                       className="px-3 py-2 d-flex pointer text-decoration-none"
-                      to="/profile/password"
+                      // to="/profile/password"
+                      to="#"
                       // onClick={() => click("password")}
                     >
                       {/* {profiles === "password" ? (
@@ -302,7 +324,7 @@ const Navbar = (props) => {
                   <div className="">
                     <div
                       className="px-3 py-2 d-flex pointer text-decoration-none"
-                      onClick={() => logoutcall()}
+                      // onClick={() => logoutcall()}
                     >
                       {/* {profiles === "logout" ? (
                             <img className="" src={logOutA} alt="" />
@@ -324,24 +346,27 @@ const Navbar = (props) => {
         <div className="">
           <Collapse isOpen={isOpen}>
             <NavLink
-              activeClassName="navActive"
+              // activeClassName="navActive"
               className="navLink navHover "
-              to="/home"
+              // to="/home"
+              to="#"
             >
               Home
             </NavLink>
             <NavLink
-              activeClassName="navActive"
+              // activeClassName="navActive"
               className="navLink navHover"
-              to="/book"
+              // to="/book"
+              to="#"
             >
               Books
             </NavLink>
             {Id ? (
               <NavLink
-                activeClassName="navActive"
+                // activeClassName="navActive"
                 className="navLink navHover"
-                to="/profile"
+                // to="/profile"
+                to="#"
               >
                 My Library
               </NavLink>
@@ -350,16 +375,17 @@ const Navbar = (props) => {
             )}
             {/* {users?.userType == 2 && ( */}
             <NavLink
-              activeClassName="navActive"
+              // activeClassName="navActive"
               className="navLink navHover"
-              to="/training"
+              // to="/training"
+              to="#"
             >
               Courses
             </NavLink>
             {/* )} */}
 
             {/* <NavLink
-                activeClassName="navActive"
+          // activeClassName="navActive"
                 className="navLink navHover"
                 to="/contact"
               >
